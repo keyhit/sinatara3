@@ -1,0 +1,12 @@
+<h3>Here you can change curent user name.</h3>
+<ul class="article_nav">
+  <li><a href="/">Main page</a></li>
+  <li><a href="/users/<%= @user.id %>">User's main</a></li>
+</ul>
+<br>
+<form action="/users/<%= @user.id %>" method="post"> 
+  <input type="hidden" name="_method" value="put">
+  <label for="name"><strong>Cange you curent user name:</strong></label>
+  <input type="text" name="user[name]" id="name" value="<%= @user.name %>">
+  <input id="post_submit" type="submit" name="comit" value="Save this changes.">
+</form>

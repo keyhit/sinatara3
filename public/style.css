@@ -1,0 +1,73 @@
+/**/
+.posts{
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+}
+
+.users{
+    border-left: solid;
+    border-left-color: #FAFAFA;
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+    float: right;
+}
+
+.main_page_content{
+    
+}
+
+.main_page_content h4 {
+    background-color: #FAFAFA;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.main_page_content p {
+    background-color: #FAFAFA;
+    padding-left: 20px;
+}
+
+.small_main_page_content{
+    font-size: 15px;
+    border-radius: 10px;
+    border-bottom: solid;
+    border-bottom-color: lavenderblush;
+}
+
+.users_preview{
+    background-color: #E5E7E9;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    border: solid;
+    border-color: #FAFAFA;
+    background-color: #FAFAFA;
+    text-align: center;
+}
+
+
+.article_nav li {
+    float: left;
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.article_delete {
+    background-color: #FE2E2E;
+    color: aliceblue;
+}

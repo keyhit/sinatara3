@@ -1,0 +1,14 @@
+  <h3>Here all <%= @user.name %>'s posts </h3>
+<ul class="article_nav">
+  <li><a href="/">Main page</a></li>
+  <li><a href="/users/<%= @user.id %>">User's main</a></li>
+  <li><a href="<%= new_post_form(@user.id) %>">New post</a></li>
+</ul>
+<br>
+<% @posts.each do |post| %>
+  <div class="users_preview">
+    <h2><%= post.title %></h2>
+    <p><%= post.content %></p>
+    <a href="<%= show_user_post(@user.id, post.id) %>">Actions</a>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+<h3>Welcome to <%= @user.name %>'s page !!!</h3>
+<ul class="article_nav">
+  <li><a href="/">Main page</a></li>
+  <li><a href="<%= user_posts(@user.id) %>">User's posts</a></li>
+  <li><a href="<%= new_post_form(@user.id) %>">New post</a></li>
+  <% if @user.name != 'root' %>
+  <li><a href="/users/<%= @user.id %>/edit">Edit username <%= @user.name %></a></li>
+  <% end %>
+</ul>

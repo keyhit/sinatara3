@@ -1,0 +1,11 @@
+<% if @user %>
+  <p>Are you sure?</p>
+<li><a href="/">NO!</a></li>
+  <form action="/users/<%= @user %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input class="article_delete" type="submit" value="YES!">
+  </form>
+  <% else %>
+    <p>Not found!!!</p>
+  <% end %>
+

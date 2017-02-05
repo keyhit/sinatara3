@@ -1,0 +1,16 @@
+<ul class="article_nav">
+  <li><a href="/">Main page</a></li>
+  <li><a href="/users/<%= @user.id %>">User's main</a></li>
+  <li><a href="<%= user_posts(@user.id) %>">User's posts</a></li>
+  <li><a href="<%= show_user_post(@user, @post) %>">Review post</a></li>
+</ul>
+<br>
+<% if @post %>
+  <p>Are you sure?</p>
+  <form action="/user/<%= @user.id %>/post/<%= @post.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input class="article_delete" type="submit" value="YES!">
+  </form>
+  <% else %>
+    <p>Not found!!!</p>
+  <% end %>

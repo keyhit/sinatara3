@@ -1,0 +1,14 @@
+<ul class="article_nav">
+  <li><a href="/">Main page</a></li>
+  <li><a href="/users/<%= @user.id %>">User's main</a></li>
+  <li><a href="<%= user_posts(@user.id) %>">User's posts</a></li>
+  <li><a href="/user/<%= @user.id %>/post/<%= @post.id %>/edit">Edit</a></li>
+  <li><a href="<%= call_del_confirm(@user.id, @post.id) %>">Delete</a>
+</ul>
+<br>
+<div class="users_preview">
+<h2><%= @post.title %></h2>
+<p><%= @post.content %></p>
+<p>Created at <%= @post.created_at %></p>
+<br>
+</div>

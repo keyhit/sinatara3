@@ -1,0 +1,32 @@
+<%= @par %>
+<div class="posts">
+  <h3>Here all posts </h3>
+  <% @posts.each do |post| %>
+    <div class="main_page_content">
+      <h4><%= post.title %></h4>
+      <p><%= post.content %></p>
+      <p class="small_main_page_content">Writed <%= post.created_at %> by author 
+      <% @users.each do |writer| %>
+      <% if writer.id == post.user_id%>
+      <b><%= writer.name%></b>
+      <% end %>
+      <% end %>
+      </p>
+    </div>
+  <% end %>
+</div>
+<div class="users">
+  <h3>Here all users </h3>
+  <ul>
+    <li><a href="/user/new">New user</a></li>
+  </ul>
+  <% @users.each do |user| %>
+    <ul>
+      <li><a href="/users/<%= user.id %>"><%= user.name %></a> 
+      <% if user.name != 'root' %>
+      <a href="/users/<%= user.id %>/delete">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete <%= user.name %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+  </div>
+<%= %>

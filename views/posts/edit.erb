@@ -1,0 +1,18 @@
+<h3>Here you can change this arctcle as it need.</h3>
+<ul class="article_nav">
+  <li><a href="/">Main page</a></li>
+  <li><a href="/users/<%= @user.id %>">User's main</a></li>
+</ul>
+<br>
+<form action="/user/<%= @user.id %>/post/<%= @post.id %>" method="post"> 
+<ul>
+  <input type="hidden" name="_method" value="put">
+  <li><label for="title"><strong>Title:</strong></label></li>
+  <li><input type="text" name="post[title]" id="title" value="<%= @post.title %>"
+  style="width:500px;"></li>
+  <li><label for="content"><strong>Post content:</strong></label></li>
+  <li><textarea id="content" name="post[content]" style="width:500px; height: 150px;"><%= @post.content %>
+  </textarea></li>
+  <li><input id="post_submit" type="submit" name="comit" value="Save this changes."></li>
+</ul>
+</form>

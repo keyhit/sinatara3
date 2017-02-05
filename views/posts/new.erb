@@ -1,0 +1,23 @@
+<ul class="article_nav">
+  <li><a href="/">Main page</a></li>
+  <li><a href="/users/<%= @user %>">User's main</a></li>
+  <li><a href="<%= user_posts(@user) %>">User's posts</a></li>
+</ul>
+<br>
+<form method="post" action="<%= new_post_writer %>">
+<ul>
+    <label for="title"><strong>Post title:</strong></label>
+    <br>
+    <input id="title" type="text" name="title" value="" style="width:500px;">
+  </li>
+  <li>
+    <label for="content"><strong>Post content:</strong></label>
+    <br>
+    <textarea id="content" name="content" style="width:500px; height: 150px;">&nbsp;</textarea>
+  </li>
+  <li>
+    <input type="hidden" name="user_id" value="<%= @user %>">
+    <input type="submit" name="submit" value="Create post">
+  </li>
+</ul>
+</form>
