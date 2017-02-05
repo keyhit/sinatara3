@@ -2,7 +2,7 @@
   <li><a href="/">Main page</a></li>
   <li><a href="/users/<%= @user.id %>">User's main</a></li>
   <li><a href="<%= user_posts(@user.id) %>">User's posts</a></li>
-  <li><a href="<%= show_user_post(@user, @post) %>">Review post</a></li>
+  <li><a href="<%= show_user_post(@user.id, @post.id) %>">Review post</a></li>
 </ul>
 <br>
 <% if @post %>
