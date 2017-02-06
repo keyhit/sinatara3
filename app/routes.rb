@@ -146,6 +146,21 @@ delete '/users/:id' do
   redirect to '/'
 end
 
+get '/data_json' do 
+  content_type :json
+  @posts = Post.all
+  @posts.to_json
+end
+
+get '/responds' do 
+@posts = Post.all
+  def show
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+    end
+  end
+end
 # # exec editing posts
 # put '/posts/:id' do 
 #   @post = Post.find(params[:id])

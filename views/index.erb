@@ -1,6 +1,11 @@
 <%= @par %>
 <div class="posts">
   <h3>Here all posts </h3>
+    <ul class="article_nav">
+    <li><a href="/data_json">data_json</a></li>
+    <li><a href="/responds">responds</a></li>
+  </ul>
+  <br>
   <% @posts.each do |post| %>
     <div class="main_page_content">
       <h4><%= post.title %></h4>

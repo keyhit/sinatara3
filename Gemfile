@@ -9,6 +9,7 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'puma'
 gem 'pg'
+gem 'json'
 
 group :development do 
   gem 'shotgun'
