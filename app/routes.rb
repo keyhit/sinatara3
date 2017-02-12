@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# get '/' do 
-#   erb :layout
-# end
-
 # show all posts and users
 get '/' do 
   @title = 'Head page'
@@ -161,36 +156,3 @@ get '/responds' do
     end
   end
 end
-# # exec editing posts
-# put '/posts/:id' do 
-#   @post = Post.find(params[:id])
-#     if @post.update_attributes(params[:post])
-#       redirect to '/'
-#     else
-#       erb :'posts/edit'
-#     end
-# end
-# # show 10 users
-# get '/' do 
-#   @title = 'Head page'
-#   @users = User.all
-#   erb :'users/index'
-# end
-
-# # about page
-# get '/about/?' do 
-#   @title = 'About me'
-#   erb :about
-# end
-
-# # if not found
-# not_found do 
-#   @title = 'No such page'
-# erb :'404'
-# end
-
-# # if server error
-# error do
-#   @error = request.env['sinatra_error'].name
-#   erb :'500'
-# end

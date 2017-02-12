@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
 require 'sinatra'# load sinatra
 require 'sinatra/activerecord'
 require 'redcarpet'
 require 'puma'
 require 'json'
+require 'rack'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/app')
 require 'model_post' # models here
