@@ -11,11 +11,13 @@ gem 'puma'
 gem 'pg'
 gem 'json'
 gem 'rack'
-gem 'responders'
+gem 'sinatra-json'
+gem 'tilt-jbuilder'
 
 group :development do 
   gem 'shotgun'
   gem 'tux'
+  gem 'pry'
 end
 
 group :test do 

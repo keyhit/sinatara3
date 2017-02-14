@@ -4,6 +4,9 @@ require 'redcarpet'
 require 'puma'
 require 'json'
 require 'rack'
+require 'pry'
+require 'sinatra/json'
+require 'sinatra/jbuilder'
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/app')
 require 'model_post' # models here

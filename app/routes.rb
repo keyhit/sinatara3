@@ -3,11 +3,11 @@ get '/' do
   @title = 'Head page'
   @posts = Post.all
   @users = User.all
-  respond_to do |format|
-    format.html
-    format.json { render json: @posts }
+  if request.content_type == 'application/json'
+    jbuilder :index
+  else
+    erb :index
   end
-  erb :index
 end
 
 # posts data operations
@@ -149,14 +149,4 @@ get '/data_json' do
   content_type :json
   @posts = Post.all
   @posts.to_json
-end
-
-get '/responds' do 
-@posts = Post.all
-  def show
-    respond_to do |format|
-      format.html
-      format.json { render json: @posts }
-    end
-  end
 end

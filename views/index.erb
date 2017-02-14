@@ -3,7 +3,6 @@
   <h3>Here all posts </h3>
     <ul class="article_nav">
     <li><a href="/data_json">data_json</a></li>
-    <li><a href="/responds">responds</a></li>
   </ul>
   <br>
   <% @posts.each do |post| %>
@@ -11,11 +10,7 @@
       <h4><%= post.title %></h4>
       <p><%= post.content %></p>
       <p class="small_main_page_content">Writed <%= post.created_at %> by author 
-      <% @users.each do |writer| %>
-      <% if writer.id == post.user_id%>
-      <b><%= writer.name%></b>
-      <% end %>
-      <% end %>
+      <b><%= post.user.name%></b>
       </p>
     </div>
   <% end %>
