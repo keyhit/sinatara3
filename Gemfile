@@ -11,6 +11,7 @@ gem 'puma'
 gem 'pg'
 gem 'json'
 gem 'rack'
+gem 'responders'
 
 group :development do 
   gem 'shotgun'

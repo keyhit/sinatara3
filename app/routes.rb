@@ -3,6 +3,10 @@ get '/' do
   @title = 'Head page'
   @posts = Post.all
   @users = User.all
+  respond_to do |format|
+    format.html
+    format.json { render json: @posts }
+  end
   erb :index
 end
 
